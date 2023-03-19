@@ -1,0 +1,8 @@
+require("kash.remap")
+require("kash.packer")
+require("kash.after.plugin.telescope")
+require("kash.after.plugin.colors")
+require("kash.after.plugin.treesitter")
+require("kash.after.plugin.undotree")
+require("kash.after.plugin.fugitive")
+require("kash.after.plugin.startup")
