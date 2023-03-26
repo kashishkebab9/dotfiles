@@ -43,11 +43,24 @@ return require('packer').startup(function(use)
 	  }
   }
   use {'neoclide/coc.nvim', branch = 'release'}
+
   use {
-	  "startup-nvim/startup.nvim",
-	  requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+	  'goolord/alpha-nvim',
+	  requires = { 'nvim-tree/nvim-web-devicons' },
+	  config = function ()
+		  --require'alpha'.setup(require'alpha.themes.startify'.config)
+	  end
+  }
+  use {
+	  "folke/which-key.nvim",
 	  config = function()
-		  require("startup").setup({theme = "evil"})
+		  vim.o.timeout = true
+		  vim.o.timeoutlen = 300
+		  require("which-key").setup {
+			  -- your configuration comes here
+			  -- or leave it empty to use the default settings
+			  -- refer to the configuration section below
+		  }
 	  end
   }
 end)
