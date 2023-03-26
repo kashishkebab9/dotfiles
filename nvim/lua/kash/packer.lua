@@ -42,6 +42,7 @@ return require('packer').startup(function(use)
 		  {'rafamadriz/friendly-snippets'}, -- Optional
 	  }
   }
+
   use {'neoclide/coc.nvim', branch = 'release'}
 
   use {

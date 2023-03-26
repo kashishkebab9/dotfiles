@@ -6,3 +6,6 @@ require("kash.after.plugin.treesitter")
 require("kash.after.plugin.undotree")
 require("kash.after.plugin.fugitive")
 require("kash.after.plugin.alpha")
+vim.cmd("source ~/.config/nvim/lua/kash/after/plugin/coc.vim")
+
+
