@@ -64,4 +64,12 @@ return require('packer').startup(function(use)
 		  }
 	  end
   }
+  use {'gko/vim-coloresque'}
+  use {'lambdalisue/fern.vim'}
+  -- use {'ggandor/leap.nvim'}
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+  use { "untitled-ai/jupyter_ascending.vim" }
 end)

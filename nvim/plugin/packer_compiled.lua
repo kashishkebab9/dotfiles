@@ -120,15 +120,30 @@ _G.packer_plugins = {
     path = "/home/kash/.local/share/nvim/site/pack/packer/start/coc.nvim",
     url = "https://github.com/neoclide/coc.nvim"
   },
+  ["fern.vim"] = {
+    loaded = true,
+    path = "/home/kash/.local/share/nvim/site/pack/packer/start/fern.vim",
+    url = "https://github.com/lambdalisue/fern.vim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/kash/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["jupyter_ascending.vim"] = {
+    loaded = true,
+    path = "/home/kash/.local/share/nvim/site/pack/packer/start/jupyter_ascending.vim",
+    url = "https://github.com/untitled-ai/jupyter_ascending.vim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/kash/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/kash/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -185,6 +200,11 @@ _G.packer_plugins = {
     path = "/home/kash/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
+  ["vim-coloresque"] = {
+    loaded = true,
+    path = "/home/kash/.local/share/nvim/site/pack/packer/start/vim-coloresque",
+    url = "https://github.com/gko/vim-coloresque"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/kash/.local/share/nvim/site/pack/packer/start/vim-fugitive",
@@ -199,14 +219,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: alpha-nvim
-time([[Config for alpha-nvim]], true)
-try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "alpha-nvim")
-time([[Config for alpha-nvim]], false)
 -- Config for: which-key.nvim
 time([[Config for which-key.nvim]], true)
 try_loadstring("\27LJ\2\nt\0\0\3\0\a\0\0156\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1,\1=\1\3\0006\0\4\0'\2\5\0B\0\2\0029\0\6\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\15timeoutlen\ftimeout\6o\bvim\0", "config", "which-key.nvim")
 time([[Config for which-key.nvim]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+try_loadstring("\27LJ\2\n\v\0\0\1\0\0\0\1K\0\1\0\0", "config", "alpha-nvim")
+time([[Config for alpha-nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
