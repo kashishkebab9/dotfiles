@@ -64,6 +64,8 @@ return require('packer').startup(function(use)
 		  }
 	  end
   }
+  use 'nvim-tree/nvim-web-devicons'
+  use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
   use {'gko/vim-coloresque'}
   use {'lambdalisue/fern.vim'}
   -- use {'ggandor/leap.nvim'}
@@ -72,4 +74,13 @@ return require('packer').startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
   use { "untitled-ai/jupyter_ascending.vim" }
+  use { 'thibthib18/ros-nvim', config=function()
+    require 'ros-nvim'.setup({})
+  end
+  -- Lua
+  }
+  use {'nvim-orgmode/orgmode', config = function()
+    require('orgmode').setup_ts_grammar{}
+  end
+  }
 end)

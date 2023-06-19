@@ -7,6 +7,8 @@ require("kash.after.plugin.undotree")
 require("kash.after.plugin.fugitive")
 require("kash.after.plugin.alpha")
 require("kash.after.plugin.lualine")
+require("kash.after.plugin.orgmode")
+require("kash.after.plugin.lsp")
 vim.cmd("source ~/.config/nvim/lua/kash/after/plugin/coc.vim")
 
 
