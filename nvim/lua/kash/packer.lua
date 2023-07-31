@@ -83,4 +83,11 @@ return require('packer').startup(function(use)
     require('orgmode').setup_ts_grammar{}
   end
   }
+  use({
+    "kdheepak/lazygit.nvim",
+    -- optional for floating window border decoration
+    requires = {
+      "nvim-lua/plenary.nvim",
+    },
+  })
 end)
