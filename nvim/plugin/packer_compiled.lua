@@ -140,6 +140,11 @@ _G.packer_plugins = {
     path = "/home/kash/.local/share/nvim/site/pack/packer/start/jupyter_ascending.vim",
     url = "https://github.com/untitled-ai/jupyter_ascending.vim"
   },
+  ["lazygit.nvim"] = {
+    loaded = true,
+    path = "/home/kash/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
+    url = "https://github.com/kdheepak/lazygit.nvim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/kash/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
