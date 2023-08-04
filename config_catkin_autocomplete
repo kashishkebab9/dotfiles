@@ -1,0 +1,44 @@
+#!/usr/bin/env fish
+
+catkin config --append-args -DCMAKE_EXPORT_COMPILE_COMMANDS=1
+
+if not catkin locate --workspace (pwd) &> /dev/null
+  echo "not in a catkin workspace!"
+  exit
+else
+  cd (catkin locate --workspace (pwd))
+end
+
+# build single compile_commands.json file
+
+set -l outfile "build/compile_commands.json"
+
+echo "[" > $outfile
+
+set -l ccfs build/*/compile_commands.json
+if test "$ccfs" = ""
+  echo "no compile_commands.json files found in "(pwd)"/build!"
+  exit
+end
+
+for ccf in $ccfs
+
+  # no joining comma needed for the first file to be concatenated
+  if test (wc -l < $outfile) -ne 1
+    echo "," >> $outfile
+  end
+
+  # remove first / last line brackets
+  cat $ccf | sed '1d;$d' >> $outfile
+
+end
+
+echo "]" >> $outfile
+
+# link it to each workspace so clangd works
+
+for dir in src/*
+  if test -d $dir
+    ln -sf (pwd)/$outfile $dir/compile_commands.json
+  end
+end
