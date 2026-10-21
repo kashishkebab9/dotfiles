@@ -8,15 +8,19 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',
-  -- or                            , branch = '0.1.x',
-    requires = { {'nvim-lua/plenary.nvim'} }
-  }
+  'nvim-telescope/telescope.nvim',
+  branch = '0.1.x',
+  requires = { 'nvim-lua/plenary.nvim' }
+	}
 
   use({ 'rose-pine/neovim', as = 'rose-pine' })
   vim.cmd('colorscheme rose-pine')
 
-  use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    branch = 'master',
+    run = ':TSUpdate'
+	}
   use('nvim-treesitter/Playground')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
@@ -78,10 +82,6 @@ return require('packer').startup(function(use)
     require 'ros-nvim'.setup({})
   end
   -- Lua
-  }
-  use {'nvim-orgmode/orgmode', config = function()
-    require('orgmode').setup_ts_grammar{}
-  end
   }
   use({
     "kdheepak/lazygit.nvim",
