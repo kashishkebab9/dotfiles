@@ -1,7 +1,7 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 -- Only required if you have packer configured as `opt`
-vim.cmd [[packadd packer.nvim]]
+pcall(vim.cmd, [[packadd packer.nvim]])
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
@@ -14,7 +14,7 @@ return require('packer').startup(function(use)
 	}
 
   use({ 'rose-pine/neovim', as = 'rose-pine' })
-  vim.cmd('colorscheme rose-pine')
+  pcall(vim.cmd, 'colorscheme rose-pine') -- pcall: theme may not be installed yet on a fresh setup
 
   use {
     'nvim-treesitter/nvim-treesitter',
